@@ -25,7 +25,7 @@ function Header() {
         </button>
 
         {/* Right side (Title) */}
-        <h1 className="text-lg sm:text-2xl font-bold text-black-500 text-center flex-1">
+        <h1 className="text-lg sm:text-2xl font-bold text-black-500">
           3rd Year Anniversary Aizen ❤︎ Eos
         </h1>
       </div>
