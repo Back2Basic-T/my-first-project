@@ -11,7 +11,7 @@ function Header() {
         
         {/* Left side (Navigation links) */}
         <nav className="hidden md:flex gap-8 text-lg">
-          <Link to="/" className="hover:text-white font-bold">Home</Link>
+          <Link to="/my-firs-project" className="hover:text-white font-bold">Home</Link>
           <Link to="/story" className="hover:text-white font-bold">Our Story</Link>
           <Link to="/gallery" className="hover:text-white font-bold">Gallery</Link>
         </nav>
