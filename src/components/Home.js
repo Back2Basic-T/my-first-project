@@ -9,7 +9,7 @@ function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
           {/* Left Side */}
-          <div className="p-6 rounded shadow bg-white/70">
+          <div className="p-6 rounded shadow bg-gray-70">
             <h2 className="text-xl font-bold mb-2 text-black">Picture Based State</h2>
             <p className="text-black">Content Here</p>
           </div>
