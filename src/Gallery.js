@@ -40,7 +40,7 @@ const images = [
   process.env.PUBLIC_URL + "/Gallery/37pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/38pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/39pic.jpg",
-  process.env.PUBLIC_URL + "/Gallery/40pic.jpg",
+  process.env.PUBLIC_URL + "/my-first-project/Gallery/40pic.jpg",
 ];
 
 
