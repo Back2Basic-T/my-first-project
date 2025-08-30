@@ -5,7 +5,7 @@ function Home() {
         <div className="py-8 px-4 text-center"
 >
             <div className="App">
-                <header className="App-header" style={{ backgroundImage: "url('/home-bg.jpeg')", height: "100vh", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <header className="App-header" style={{ backgroundImage: "url(${process.env.PUBLIC_URL}/home-bg.jpeg)", height: "100vh", backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     {/* Container for 2 sides */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left " >
                         

@@ -24,7 +24,7 @@ const images = [
   process.env.PUBLIC_URL + "/Gallery/21pic.jpeg",
   process.env.PUBLIC_URL + "/Gallery/22pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/23pic.jpeg",
-  process.env.PUBLIC_URL + "/Gallery/24pic.jpg",
+  process.env.PUBLIC_URL + "/Gallery/41pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/25pic.jpeg",
   process.env.PUBLIC_URL + "/Gallery/26pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/27pic.jpeg",
@@ -40,7 +40,7 @@ const images = [
   process.env.PUBLIC_URL + "/Gallery/37pic.jpeg",
   process.env.PUBLIC_URL + "/Gallery/38pic.jpg",
   process.env.PUBLIC_URL + "/Gallery/39pic.jpg",
-  process.env.PUBLIC_URL + "/Gallery/40pic.jepg",
+  process.env.PUBLIC_URL + "/Gallery/40pic.jpeg",
 ];
 
 
