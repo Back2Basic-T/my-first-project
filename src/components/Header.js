@@ -25,7 +25,7 @@ function Header() {
         </button>
 
         {/* Right side (Title) */}
-        <h1 className="text-2xl font-bold text-black-500">3rd Year Anniversary Aizen Eos ❤︎</h1>
+        <h1 className="text-1xl font-bold text-black-500">3rd Year Anniversary Aizen Eos ❤︎</h1>
       </div>
 
       {/* Mobile Dropdown Menu */}
