@@ -11,7 +11,7 @@ function Header() {
         
         {/* Left side (Navigation links) */}
         <nav className="hidden md:flex gap-8 text-lg">
-          <Link to="/home" className="hover:text-white font-bold">Home</Link>
+          <Link to="/my-first-project" className="hover:text-white font-bold">Home</Link>
           <Link to="/story" className="hover:text-white font-bold">Our Story</Link>
           <Link to="/gallery" className="hover:text-white font-bold">Gallery</Link>
         </nav>
@@ -31,7 +31,7 @@ function Header() {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 bg-[#93b071] p-4 mt-2 rounded-lg shadow-md">
-          <Link to="/home" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/my-first-project" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/story" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Our Story</Link>
           <Link to="/gallery" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Gallery</Link>
         </div>
