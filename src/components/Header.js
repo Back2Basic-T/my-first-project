@@ -25,15 +25,14 @@ function Header() {
         </button>
 
         {/* Right side (Title) */}
-        <h1 className="text-lg sm:text-2xl font-bold text-black-500">
-          3rd Year Anniversary Aizen ❤︎ Eos
+        <h1 className="text-2xl font-bold text-black-500">3rd Year Anniversary Aizen Eos ❤︎</h1>
         </h1>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden flex flex-col gap-4 bg-[#93b071] p-4 mt-2 rounded-lg shadow-md">
-          <Link to="/" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/home" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/story" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Our Story</Link>
           <Link to="/gallery" className="hover:text-white font-bold" onClick={() => setIsOpen(false)}>Gallery</Link>
         </div>
