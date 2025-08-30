@@ -15,7 +15,7 @@ function Home() {
           </div>
 
           {/* Right Side */}
-          <div className="bg-green-100 p-6 rounded shadow">
+          <div className="bg-gray-70 p-6 rounded shadow">
             <h2 className="text-xl font-bold mb-2 text-black">Message here!!</h2>
             <p className="text-black">This is the right side content.</p>
           </div>
