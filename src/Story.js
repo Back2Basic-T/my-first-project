@@ -2,7 +2,7 @@ import React from "react";
 
 function Story() {
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundImage: "url('/home-bg.jpeg')", height: "100vh", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="flex flex-col min-h-screen" style={{ backgroundImage: "url('/my-first-project/homebg.jpeg')", height: "100vh", backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <main className="flex-grow container mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">Our Story</h1>
         <p className="mb-4">
