@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -7,7 +7,7 @@ import Story from "./Story";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/my-first-project">
       <div className="App flex flex-col min-h-screen">
         {/* Header with Navigation */}
         <Header />
