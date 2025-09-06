@@ -1,28 +1,45 @@
 import React, { useState, useEffect } from "react";
+import { db } from "../firebase";
+import {
+  collection,
+  addDoc,
+  onSnapshot,
+  query,
+  orderBy,
+  serverTimestamp,
+} from "firebase/firestore";
 
 function Home() {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
-  // Load comments from localStorage on component mount
+  // Load comments in real-time from Firestore
   useEffect(() => {
-    const savedComments = localStorage.getItem("comments");
-    if (savedComments) {
-      setComments(JSON.parse(savedComments));
-    }
+    const q = query(collection(db, "comments"), orderBy("timestamp", "desc"));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      setComments(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          text: doc.data().text,
+          timestamp: doc.data().timestamp,
+        }))
+      );
+    });
+
+    return () => unsubscribe();
   }, []);
 
-  // Save comments to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("comments", JSON.stringify(comments));
-  }, [comments]);
-
-  const handleSubmit = () => {
+  // Submit new comment to Firestore
+  const handleSubmit = async () => {
     if (comment.trim() !== "") {
-      setComments([...comments, comment]);
+      await addDoc(collection(db, "comments"), {
+        text: comment,
+        timestamp: serverTimestamp(),
+      });
       setComment(""); // clear input
     }
   };
+
 
   return (
     <div
@@ -73,10 +90,12 @@ function Home() {
             </p>
             <br />
             <p className="text-red-500 text-5xl text-center">❤︎❤︎❤︎</p>
+            <br/>
           </div>
-
-          {/* Right Side - Comment Box */}
-          <div className="p-6 rounded shadow flex flex-col">
+            
+            
+            {/* Right Side - Comment Box */}
+          <div className="p-6 rounded shadow flex flex-col bg-white">
             <h2 className="text-xl font-bold mb-4 text-black">
               Leave a Message 💬
             </h2>
@@ -103,12 +122,12 @@ function Home() {
                 <p className="text-gray-500">No response yet.</p>
               ) : (
                 <ul className="space-y-2">
-                  {comments.map((c, index) => (
+                  {comments.map((c) => (
                     <li
-                      key={index}
+                      key={c.id}
                       className="bg-gray-100 p-3 rounded-lg shadow text-black"
                     >
-                      {c}
+                      {c.text} 
                     </li>
                   ))}
                 </ul>
